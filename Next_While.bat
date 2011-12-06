@@ -1,0 +1,12 @@
+SET /A TMP2=0
+:LOOP
+	SET /A PC=PC+1
+	SET /A NOWCMD=PROG%PC%
+	IF "%NOWCMD%"=="7" (
+		SET /A TMP2=TMP2+1
+	)
+	IF "%NOWCMD%"=="8" (
+		SET /A TMP2=TMP2-1
+	)
+	
+	IF NOT "%TMP2%"=="-1" GOTO LOOP
